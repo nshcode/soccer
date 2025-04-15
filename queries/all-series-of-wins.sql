@@ -1,9 +1,10 @@
-SELECT
-  competition, team,
-  from_gameweek, to_gameweek,
-  to_char(from_date, 'DD-MM-YYYY') AS from_dae,
-  to_char(to_date, 'DD-MM-YYYY')   AS to_date,
-  num_of_wins
+SELECT competition
+  , team
+  , from_gameweek
+  , to_gameweek
+  , to_char(from_date, 'DD-MM-YYYY') AS from_dae
+  , to_char(to_date, 'DD-MM-YYYY')   AS to_date
+  , num_of_wins
 FROM(
   SELECT * FROM matchteam_vw
   WHERE competition NOT IN ('World Cup', 'European Championship')
@@ -22,5 +23,7 @@ FROM(
     DEFINE
       W AS W.winner = 'Y' AND NEXT(W.winner) = 'Y'
  )
-WHERE team = 'Bayern München' ORDER BY from_date;
+WHERE team = 'Bayern München' 
+ORDER BY from_date
+;
 
