@@ -23,7 +23,7 @@ FROM (
       AFTER MATCH SKIP TO NEW_C
       PATTERN(S C* NEW_C) 
       DEFINE
-        C AS C.coach = PREV(C.coach),
+        C     AS C.coach = PREV(C.coach),
         NEW_C AS NEW_C.coach != S.coach        
   )
 WHERE competition LIKE 'Spanish%' 
