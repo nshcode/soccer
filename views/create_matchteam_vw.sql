@@ -1,4 +1,4 @@
-DROP VIEW matchteam_vw;
+--DROP VIEW matchteam_vw;
 CREATE VIEW matchteam_vw AS
   SELECT c.competitionid
     , c.name      AS competition
