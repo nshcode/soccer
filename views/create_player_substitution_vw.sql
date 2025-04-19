@@ -1,4 +1,4 @@
-
+--DROP VIEW player_substitution_vw;
 CREATE VIEW player_substitution_vw AS
 SELECT c.competitionid
   , c.name            AS competition
@@ -10,6 +10,7 @@ SELECT c.competitionid
   , pin.lastname       AS playerin
   , pout.playerid      AS playeroutid 
   , pout.lastname      AS playerout
+  , ms.minute
 FROM competition c
 JOIN match m              ON c.competitionid = m.competitionid
 JOIN matchsubstitution ms ON m.matchid = ms.matchid
