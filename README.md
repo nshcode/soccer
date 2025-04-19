@@ -25,5 +25,6 @@ The data refers to the 2017/2018 season of five national soccer competitions in 
        * create_soccer_tables.sql
        * insert_soccer_data.sql
        * add_keys.sql
+       * create_soccer_views.sql
          
      Be aware that inserting the EVENT data takes a relatively longer time than inserting the other data. The EVENT table has 3,251,294 records.
